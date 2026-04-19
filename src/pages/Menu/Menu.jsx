@@ -1,25 +1,26 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-import useFetch from "../../hooks/useFetch";
+// import useFetch from "../../hooks/useFetch";
 import styles from "./Menu.module.css";
-import Loading from "../../components/Ui/Loading/Loading";
-import Error from "../../components/Ui/Error/Error";
+// import Loading from "../../components/Ui/Loading/Loading";
+// import Error from "../../components/Ui/Error/Error";
 import { ThemeContext } from "../../context/ThemeContext";
 import { useCart } from "../../context/CartContext";
 import { useFav } from "../../context/FavContext";
+import products from "../../data/products";
 
 function Menu() {
   const { darkMode } = useContext(ThemeContext);
   const { addToCart } = useCart();
   const { toggleFavorite, isInFavorites } = useFav();
-  const { data: products, loading, error } = useFetch("http://localhost:3001/products");
+  // const { data: products, loading, error } = useFetch("http://localhost:3001/products");
 
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
-  if (loading) return <Loading />;
-  if (error) return <Error message={error} />;
+  // if (loading) return <Loading />;
+  // if (error) return <Error message={error} />;
 
   const categories = ["all"];
 

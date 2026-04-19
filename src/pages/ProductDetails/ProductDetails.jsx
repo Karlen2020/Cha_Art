@@ -1,27 +1,29 @@
 import React, { useContext, useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
-import useFetch from "../../hooks/useFetch";
-import Loading from "../../components/Ui/Loading/Loading";
-import Error from "../../components/Ui/Error/Error";
+// import useFetch from "../../hooks/useFetch";
+// import Loading from "../../components/Ui/Loading/Loading";
+// import Error from "../../components/Ui/Error/Error";
 import styles from "./ProductDetails.module.css";
 import { ThemeContext } from "../../context/ThemeContext";
 import { useCart } from "../../context/CartContext";
 import { useFav } from "../../context/FavContext";
+import products from "../../data/products";
 
 function ProductDetails() {
   const { darkMode } = useContext(ThemeContext);
   const { addToCart } = useCart();
   const { toggleFavorite, isInFavorites } = useFav();
   const { id } = useParams();
+  const product = products.find((item) => item.id === Number(id));
 
-  const { data: product, loading, error } = useFetch(
-    `http://localhost:3001/products/${id}`
-  );
+  // const { data: product, loading, error } = useFetch(
+  //   `http://localhost:3001/products/${id}`
+  // );
 
   const [showComments, setShowComments] = useState(false);
 
-  if (loading) return <Loading />;
-  if (error) return <Error message={error} />;
+  // if (loading) return <Loading />;
+  // if (error) return <Error message={error} />;
 
   const isFavorite = isInFavorites(product.id);
 
