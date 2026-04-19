@@ -74,8 +74,8 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  justify-content: center;
   gap: 20px;
+  align-items: stretch;
 }
 
 .card {
@@ -85,6 +85,10 @@
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -108,6 +112,12 @@
 .cardBody {
   padding: 12px;
   text-align: center;
+  padding: 12px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .cardTitle {
@@ -278,11 +288,6 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 14px;
-  }
-
-  .card {
-    max-width: 320px;
-    margin: 0 auto;
   }
 
   .imageBox {
