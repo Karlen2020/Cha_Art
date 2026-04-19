@@ -1,0 +1,160 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(243, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.5s ease
+}
+
+.box {
+  text-align: center;
+  background: rgb(121, 200, 195);
+  padding: 60px 50px;
+  border-radius: 30px;
+  box-shadow: 0 18px 45px rgba(0, 120, 120, 0.12);
+  max-width: 500px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+
+.code {
+  font-size: 100px;
+  color: rgb(0, 80, 74);
+  margin-bottom: 10px;
+  font-weight: 800;
+  transition: all 0.5s ease;
+}
+
+.title {
+  font-size: 32px;
+  color: rgb(0, 80, 74);
+  margin-bottom: 15px;
+  transition: all 0.5s ease;
+}
+
+.text {
+  font-size: 16px;
+  color: rgb(0, 80, 74);
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: rgb(0, 80, 74);
+  color: white;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background: rgb(0, 49, 46);
+}
+
+.dark {
+  background-color: rgb(0, 15, 15);
+}
+
+.dark .box {
+  background-color: rgb(0, 189, 189);
+}
+
+.dark .code,
+.dark .title,
+.dark .text {
+  color: black;
+}
+
+.dark .btn {
+  background-color: white;
+  color: black;
+}
+
+.dark .btn:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+@media (max-width: 992px) {
+  .box {
+    padding: 50px 40px;
+  }
+
+  .code {
+    font-size: 80px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    padding: 40px 30px;
+    border-radius: 24px;
+  }
+
+  .code {
+    font-size: 70px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page {
+    padding: 15px;
+  }
+
+  .box {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .code {
+    font-size: 56px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 25px;
+  }
+}

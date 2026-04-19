@@ -1,0 +1,384 @@
+.signInPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: rgb(243, 255, 255);
+  transition: all 0.5s ease;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 35px;
+}
+
+.leftSide {
+  width: 50%;
+  background-color: rgb(121, 200, 195);
+  border-radius: 30px;
+  padding: 60px 45px;
+  color: rgb(0, 80, 74);
+  box-shadow: 0 18px 45px rgba(0, 120, 120, 0.15);
+  transition: all 0.5s ease;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  color: rgb(0, 80, 74);
+  transition: all 0.5s ease;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  padding: 24px 22px;
+}
+
+.featureCard h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.rightSide {
+  width: 50%;
+  background: white;
+  border-radius: 30px;
+  padding: 50px 40px;
+  box-shadow: 0 18px 45px rgba(0, 120, 120, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.formTitle {
+  font-size: 38px;
+  color: rgb(0, 80, 74);
+  margin-bottom: 30px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.inputGroup label {
+  font-size: 15px;
+  color: rgb(0, 80, 74);
+  margin-bottom: 10px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid rgba(0, 120, 120, 0.18);
+  border-radius: 18px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper input {
+  padding-right: 80px;
+}
+
+.showBtn {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: rgb(0, 80, 74);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.signInBtn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 18px;
+  background: rgb(0, 80, 74);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.5s ease;
+}
+
+.signInBtn:hover {
+  transform: scale(1.01);
+}
+
+.dark {
+  background-color: rgb(0, 15, 15);
+}
+
+.dark .leftSide {
+  background-color: rgb(0, 189, 189);
+  color: black;
+}
+
+.dark .description {
+  color: black;
+}
+
+.dark .formTitle,
+.dark .inputGroup label,
+.dark .showBtn {
+  color: black;
+}
+
+.dark .inputGroup input {
+  border: 2px solid rgba(0, 0, 0, 0.603);
+}
+
+.dark .signInBtn {
+  color: black;
+  background-color: rgb(0, 189, 189);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    gap: 25px;
+  }
+
+  .leftSide {
+    padding: 45px 35px;
+  }
+
+  .rightSide {
+    padding: 40px 30px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .featureCard h3 {
+    font-size: 20px;
+  }
+
+  .featureCard p {
+    font-size: 15px;
+  }
+
+  .formTitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    gap: 20px;
+  }
+
+  .leftSide,
+  .rightSide {
+    width: 50%;
+  }
+
+  .leftSide {
+    padding: 35px 25px;
+  }
+
+  .rightSide {
+    padding: 35px 25px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  .featureCard {
+    padding: 20px 18px;
+    border-radius: 22px;
+  }
+
+  .featureCard h3 {
+    font-size: 18px;
+  }
+
+  .featureCard p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .formTitle {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .inputGroup input {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .signInPage {
+    padding: 40px 15px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .leftSide,
+  .rightSide {
+    width: 100%;
+  }
+
+  .leftSide {
+    padding: 30px 22px;
+  }
+
+  .rightSide {
+    padding: 30px 22px;
+  }
+
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .features {
+    gap: 15px;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+
+  .formTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 576px) {
+  .signInPage {
+    padding: 30px 12px;
+  }
+
+  .leftSide,
+  .rightSide {
+    border-radius: 22px;
+  }
+
+  .leftSide {
+    padding: 25px 16px;
+  }
+
+  .rightSide {
+    padding: 25px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .featureCard {
+    padding: 16px 14px;
+    border-radius: 18px;
+  }
+
+  .featureCard h3 {
+    font-size: 16px;
+  }
+
+  .featureCard p {
+    font-size: 13px;
+  }
+
+  .formTitle {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .inputGroup {
+    margin-bottom: 18px;
+  }
+
+  .inputGroup label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .inputGroup input {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+
+  .passwordWrapper input {
+    padding-right: 70px;
+  }
+
+  .showBtn {
+    right: 12px;
+    font-size: 13px;
+  }
+
+  .signInBtn {
+    padding: 14px;
+    font-size: 15px;
+    border-radius: 14px;
+  }
+}

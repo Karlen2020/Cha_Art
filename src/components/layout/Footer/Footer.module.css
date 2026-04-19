@@ -1,0 +1,147 @@
+.footer {
+    background-color: rgb(121, 200, 195);
+    color: rgb(0, 80, 74);
+    padding: 40px 20px;
+    transition: all 0.5s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.contact h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.icon {
+    color: rgb(0, 80, 74);
+    transition: all 0.5s ease;
+}
+
+.instagram {
+    color: rgb(0, 80, 74);
+    text-decoration: none;
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 3px solid rgb(0, 80, 74);
+    padding-top: 20px;
+    transition: all 0.5s ease;
+}
+
+a {
+    transition: all 0.5s ease;
+}
+
+.dark {
+    background-color: rgb(0, 189, 189);
+    color: black;
+}
+
+.dark .bottom {
+    border-top: 3px solid black;
+}
+
+.dark .icon {
+    color: black;
+}
+
+.dark a {
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .container {
+        gap: 30px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+    }
+
+    .contact h3 {
+        font-size: 20px;
+    }
+
+    .info p,
+    .contact p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .contact p {
+        justify-content: center;
+    }
+
+    .info,
+    .contact {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .bottom {
+        margin-top: 30px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .info h2 {
+        font-size: 22px;
+    }
+
+    .contact h3 {
+        font-size: 18px;
+    }
+
+    .info p,
+    .contact p {
+        font-size: 14px;
+    }
+
+    .bottom {
+        font-size: 12px;
+        padding-top: 15px;
+    }
+}

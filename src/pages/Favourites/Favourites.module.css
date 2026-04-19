@@ -1,0 +1,171 @@
+.favourites {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 60px;
+  background-color: rgb(243, 255, 255);
+  transition: 0.4s;
+}
+
+.dark {
+  background-color: rgb(0, 15, 15);
+  color: white;
+}
+
+.title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 40px;
+  color: rgb(0, 80, 74);
+}
+
+.dark .title {
+  color: rgb(0, 189, 189);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.count {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(0, 80, 74);
+}
+
+.dark .count {
+  color: rgb(0, 189, 189);
+}
+
+.clearBtn,
+.removeBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 700;
+  background: rgb(0, 80, 74);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dark .clearBtn,
+.dark .removeBtn {
+  background: rgb(0, 189, 189);
+  color: black;
+}
+
+.emptyBox {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.empty {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(0, 80, 74);
+}
+
+.dark .empty {
+  color: rgb(0, 189, 189);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .card {
+  background: rgb(9, 30, 30);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  flex: 1;
+}
+
+.imageBox {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cardBody {
+  padding: 18px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.cardCategory {
+  margin-bottom: 10px;
+  color: rgb(0, 80, 74);
+}
+
+.dark .cardCategory {
+  color: rgb(0, 189, 189);
+}
+
+.cardPrice {
+  font-weight: 700;
+}
+
+.removeBtn {
+  margin: 0 18px 18px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .favourites {
+    padding: 35px 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

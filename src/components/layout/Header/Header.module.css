@@ -1,0 +1,361 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.parent {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgb(121, 200, 195);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 70px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  font-family: 'Milasian Circa', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 3px;
+  background-color: rgb(0, 80, 74);
+  transition: all 0.5s ease;
+}
+
+.nav ul li a:hover::after {
+  width: 100%;
+}
+
+.nav ul li a.active::after {
+  width: 100%;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+  color: rgb(0, 80, 74);
+}
+
+@font-face {
+  font-family: 'Milasian Circa';
+  src: url('../../../assets/fonts/MilasianCirca-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.dark {
+  background-color: rgb(0, 189, 189);
+}
+
+.dark .nav ul li a {
+  color: black;
+}
+
+.toggle {
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: rgb(0, 80, 74);
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.5s ease;
+}
+
+.activeBtn {
+  background: white;
+}
+
+.activeBtn .circle {
+  left: 33px;
+  background: black;
+}
+
+.dark .nav ul li a::after {
+  background-color: black;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.burger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+
+.dark .burger span {
+  background-color: black;
+}
+
+.burgerActive span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.burgerActive span:nth-child(2) {
+  opacity: 0;
+}
+
+.burgerActive span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 18px 35px;
+  }
+
+  .logo img {
+    height: 75px;
+  }
+
+  .nav ul {
+    gap: 40px;
+  }
+
+  .nav ul li a {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 16px 25px;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .nav ul {
+    gap: 25px;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+  }
+
+  .toggle {
+    width: 54px;
+    height: 28px;
+  }
+
+  .circle {
+    width: 22px;
+    height: 22px;
+  }
+
+  .activeBtn .circle {
+    left: 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    height: 55px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(121, 200, 195);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+
+  .dark .nav {
+    background-color: rgb(0, 189, 189);
+  }
+
+  .showMenu {
+    max-height: 500px;
+    padding: 20px 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 12px 15px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .rightSide {
+    gap: 12px;
+  }
+
+  .toggle {
+    width: 50px;
+    height: 26px;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+
+  .activeBtn .circle {
+    left: 27px;
+  }
+
+  .burger {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav ul li a {
+    font-size: 17px;
+  }
+}
+.rightSide {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cartBtn,
+.favBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 22px;
+  background-color: rgb(121, 200, 195);
+  transition: 0.3s;
+}
+
+.dark .cartBtn,
+.dark .favBtn {
+  background-color: rgb(0, 189, 189);
+}
+
+.cartBtn:hover,
+.favBtn:hover{
+  transform: scale(1.08);
+}
+
+.cartCount, 
+.favCount{
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 50%;
+  background: rgb(0, 80, 74);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .cartCount,
+.dark .favCount{
+  background: black;
+  color: rgb(0, 189, 189);
+}
+.cartBtn svg {
+  font-size: 23px;
+  color: white;
+}
+.dark .cartBtn svg{
+  color: black;
+}
+.favBtn svg {
+  font-size: 23px;
+  color: white;
+}
+.dark .favBtn svg{
+  color: black;
+}
+
